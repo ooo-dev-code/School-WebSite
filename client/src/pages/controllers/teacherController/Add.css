@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.grade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 15vh;
+  transform: scale(1.5);
+  transition: all 1s ease-in-out;
+
+  h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: -3px 0px 0px rgb(160 160 160), -5px 1px 0px rgb(91 91 91),
+      -2px 7px 4px rgb(110 110 110);
+  }
+
+  form {
+    padding: 100px;
+    border-left: 1px solid #b9b7b7;
+    border-right: 1px solid #b9b7b7;
+  }
+
+  /* Style the select box */
+  select {
+    font-family: "Inter", sans-serif;
+    background: #1f1f1f;
+    color: #ffffff;
+    border-color: #4f46e5; /* indigo-600 */
+
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 1s ease;
+  }
+
+  select:hover,
+  select:focus {
+    background: linear-gradient(
+      to right,
+      #4f46e5,
+      #8b5cf6
+    ); /* indigo-600 to indigo-400 */
+    outline: none;
+    transition: all 1s ease;
+  }
+
+  /* Style the options */
+  option {
+    background-color: #1f1f1f;
+    color: #0c9eff;
+    font-family: "Inter", sans-serif;
+  }
+
+  input {
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #000000;
+    background-color: #cacaca;
+    border: 1px solid #b9b7b7;
+    box-shadow: inset -3px -7px 10px rgb(255 255 255),
+      inset 0px 0px 20px rgb(0 0 0), inset 0px 1px 20px rgb(175 175 175);
+
+    &:hover,
+    &:focus {
+      border-color: #4f46e5; /* indigo-600 */
+      box-shadow: inset -3px -7px 10px rgb(255 255 255),
+        inset 0px 0px 20px rgb(0 0 0), inset 0px 1px 20px rgb(175 175 175);
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #bfbecc; /* indigo-600 */
+    border: none;
+    border-radius: 0.5rem;
+    border: 1px solid #f7f7f7; /* indigo-600 */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+      inset -3px -7px 10px rgb(255 255 255), inset 0px 0px 20px rgb(0 0 0),
+      inset -3px -7px 10px rgb(255 255 255);
+
+    &:not(:hover) {
+      width: 100%;
+      margin-top: 30px;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      color: #ffffff;
+      background-color: #bfbecc;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+        inset -3px -7px 10px rgb(255 255 255), inset 0px 0px 20px rgb(0 0 0),
+        inset -3px -7px 10px rgb(255 255 255);
+      transition: all 1s ease-in-out;
+      border: 1px solid #f7f7f7;
+    }
+
+    &:hover {
+      background-color: #48428f;
+      box-shadow: 0px 4px 6px rgba(5, 24, 130, 0.2),
+        inset 0px 1px 20px rgb(49, 55, 130),
+        inset 0px 0px 20px rgb(255, 255, 255),
+        inset 0px 1px 20px rgb(85, 42, 128);
+      border: 1px solid #4f46e5;
+      transition: all 1s ease-in-out;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0);
+    }
+  }
+}

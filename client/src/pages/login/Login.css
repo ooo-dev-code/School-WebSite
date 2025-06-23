@@ -1,0 +1,162 @@
+.logo-container {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0), -1px -1px 5px rgb(199, 193, 255),
+    inset -9px -8px 5px rgb(6, 2, 38), inset -12px -14px 5px rgb(13, 5, 73),
+    inset 3px 4px 5px rgb(51, 44, 112), inset 3px 6px 5px rgb(36, 25, 123),
+    inset 16px 13px 5px rgb(21, 14, 83);
+
+  .logo {
+    filter: invert(100%) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))
+      drop-shadow(5px 5px 5px rgba(0, 0, 0));
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.login-container {
+  background: linear-gradient(to right, #020202, rgb(4, 4, 76)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    border-radius: 10px;
+    box-shadow: -9px -8px 5px rgb(10, 4, 55);
+    background: linear-gradient(
+      var(--angle),
+      rgb(0, 0, 0),
+      #020012,
+      rgba(255, 255, 255) 35%,
+      rgb(0, 0, 0) 50%,
+      rgba(255, 255, 255) 15%,
+      rgb(0, 2, 34) 50%
+    );
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(to right, #020202, transparent),
+      url(https://grainy-gradients.vercel.app/noise.svg);
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 40%;
+    height: 10%;
+    border-radius: 20px;
+    box-shadow: inset -9px -8px 5px rgb(10, 4, 55),
+      inset -12px -14px 5px rgb(67, 58, 118),
+      inset 7px 7px 5px rgb(222, 221, 221), inset 1px 1px 5px rgb(95, 95, 95),
+      inset -11px -11px 20px rgb(4, 0, 47);
+    z-index: 1;
+    animation: before-color 8s linear infinite;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .submit {
+    background-color: rgb(214, 214, 214);
+    box-shadow: inset -9px -8px 5px rgb(10 4 55),
+      inset -12px -14px 5px rgb(67 58 118), inset 7px 7px 5px rgb(222 221 221),
+      inset 1px 1px 5px rgb(95 95 95), inset -11px -11px 20px rgb(4 0 47);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50px;
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .mouse-login-submit {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 253, 253, 0.558),
+      rgb(255, 255, 255),
+      rgb(249, 249, 139),
+      rgba(240, 240, 239, 0.558),
+      rgba(240, 239, 237, 0.558),
+      rgba(252, 112, 112, 0.558),
+      rgba(255, 255, 3, 0.558),
+      rgba(255, 0, 0, 0.558),
+      rgba(252, 112, 112, 0.558),
+      rgba(255, 3, 3, 0.558),
+      rgb(255, 0, 0)
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(25px);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.684);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #cccccc51;
+      margin: 0 10px;
+      height: 0;
+    }
+    &::before {
+      margin-right: 15px;
+    }
+    &::after {
+      margin-left: 15px;
+    }
+  }
+}
+
+.login-header {
+  h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0), -1px -1px 2px rgb(255, 255, 255);
+  }
+}
+
+.form-group {
+  input {
+    &:focus {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      color: rgb(255, 255, 255);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
